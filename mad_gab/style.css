@@ -1,0 +1,73 @@
+body {
+  background-color: pink;
+  height: 100vh;
+  margin: 0 auto;
+  font: 13px Helvetica, Arial;
+  position: fixed;
+}
+
+#guess_form {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  margin-left: 2%;
+  margin-bottom: 1%;
+}
+
+#guess_input { 
+  border: 0; 
+  padding: 10px; 
+  width: 80%; 
+  margin-right: .5%; 
+  margin-left: 3%;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+#guess_button {
+  position: fixed;
+  width: 9%; 
+  background: rgb(130, 224, 255); 
+  border: none; 
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+#guess_box {
+  margin-left: 30%;
+  text-align: right;
+  width: 60em;
+  background: white;
+  height: 43em;
+  margin-top: 1em;
+}
+
+#user_title {
+  border-bottom: 2px solid black;
+  margin-left: 1em;
+}
+
+#game_title {
+  margin-left: 5%;
+}
+
+#game_user_form {
+  max-width: 30%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: .5%;
+}
+
+#game_options {
+  display: none;
+}
+
+#game_list {
+  display: none;
+}
+
+#game_form{
+  display: none;
+}

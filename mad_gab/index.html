@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="mad">
+<head>
+  <meta charset="UTF-8">
+  <title>Mad Gab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+  <script src="dependencies/angular-ui-router.min.js"></script>
+  <script src="dependencies/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <div data-ng-controller="IndexController as vm">
+    <h1 id="game_title">Mad Gab Game: {{vm.title}}</h1>
+    <div id="game_user_form">
+      <form id="user_form">
+        <input id="user_input" type="text" data-ng-model="vm.user.name">
+        <button type="button" data-ng-click="vm.userName()">Choose Name</button>
+      </form>
+      <div id="game_options">
+        <button id="new_game" data-ng-click="vm.gameNewShow()">Create Game</button>
+        <button id="join_game" data-ng-click="vm.gameList()">Join Game</button>
+      </div>
+      <form id="game_form">
+        <input id="game_input" type="text" data-ng-model="vm.game.title">
+        <button type="button" data-ng-click="vm.gameNew()">Create Game</button>
+      </form>
+      <div id="game_list">
+        <div data-ng-repeat="game in vm.games">
+        <button type="button" data-ng-click="vim.gameJoin()">{{game}}</button>
+        </div>
+      </div>
+      <div id="user_list">
+        <h2 id="user_title">Users Online</h2>
+        <div data-ng-repeat="user in vm.users">
+          <h3 class="users">{{user}}</h3>
+        </div>
+      </div>
+    </div>
+    <div id="guess_box">
+      <div data-ng-repeat="guess in vm.guesses">
+        <p class="guess"><span class="user_name_guess">{{vm.me}}</span> guess: {{guess}}</p>
+      </div>
+    </div>
+    <form id="guess_form">
+      <input id="guess_input" type="text" data-ng-model="vm.guess"
+                                          autocomplete="off"/>
+      <button id="guess_button" type="button" data-ng-click="vm.userGuess()">Guess</button>
+    </form>
+  </div>
+</body>
+</html>
